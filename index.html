@@ -23,8 +23,26 @@
       </style>
 </head>
 <body>
-
-    <nav class="navbar navbar-expand-sm " style="background-color:#565879">
+    
+    <script>function detectDisplay(){
+            var displayWidth = window.screen.width;
+            changeMenu(displayWidth);
+        }
+        
+        // show a specific menu according to the display size
+        function changeMenu(displayWidt) {
+            if (displayWidt < 576) {
+                document.getElementById("menu1").style.display = "none";
+                document.getElementById("menu2").style.display = "";
+            } else if (displayWidt > 575) {
+                document.getElementById("menu1").style.display = "";
+                document.getElementById("menu2").style.display = "none";
+            }
+        }
+    
+    </script>
+    
+    <nav id="menu2" class="navbar navbar-expand-sm " style="background-color:#565879">
 
       <!-- Links -->
       <ul class="navbar-nav">
